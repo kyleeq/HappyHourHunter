@@ -1,0 +1,156 @@
+﻿﻿@model MealDeals.Models.Special
+@{
+    ViewBag.Title = "AddSpecials";
+}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MealDeals</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <!-- Favicon -->
+    <link rel="icon" href="Images/favicon.ico">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lobster|Luckiest+Guy|Oxygen" rel="stylesheet">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Bootstrap JS-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Bootstrap CDN-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Project CSS-->
+    <!-- <link rel="stylesheet" href="~/Content/MealDealsMap.css"/> -->
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">MealDeals</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Specials <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Map</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Profile
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Food Preferences</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <a class="dropdown-item" href="#">Sign In</a>
+                    </div>
+                </li>
+        </div>
+    </nav>
+    @using (Html.BeginForm("AddSpecials", "Home"))
+    {
+        <div class="form-horizontal">
+        <div class="accordion" id="accordionExample">
+            <div class="cardOne">
+                <div class="card-header" id="headingOne">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Type of food <i class="fas fa-utensils"></i>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlSelect1">Select an option</label>
+                            @{
+                                <select class="form-control" name="Ethnicity" id="exampleFormControlSelect1">
+                                    <option value="American">American</option>
+                                    <option value="Chinese">Chinese</option>
+                                    <option value="Healthy">Healthy</option>
+                                    <option value="Indian">Indian</option>
+                                    <option value="Italian">Italian</option>
+                                </select>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cardThree">
+                <div class="card-header" id="headingThree">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Address <i class="fas fa-map-signs"></i>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Restaurant Name</label>
+                                @Html.EditorFor(model => model.Restaurant, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput">Street number</label>
+                                @Html.EditorFor(model => model.StreetNumber, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Heading (i.e.N, E, S, W(if applicable))</label>
+                                @Html.EditorFor(model => model.Direction, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Street name</label>
+                                @Html.EditorFor(model => model.Street, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">City</label>
+                                @Html.EditorFor(model => model.City, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">State</label>
+                                @Html.EditorFor(model => model.State, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                            <div class="form-group">
+                                <label for="formGroupExampleInput2">Zip</label>
+                                @Html.EditorFor(model => model.Zip, new { htmlAttributes = new { @class = "form-control" } })
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="cardFive">
+                <div class="card-header" id="headingFive">
+                    <h2 class="mb-0">
+                        <button class="btn btn-danger" type="button" data-toggle="collapse" data-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            Description <i class="far fa-file-alt"></i>
+                        </button>
+                    </h2>
+                </div>
+                <div id="collapseFive" class="collapse show" aria-labelledby="headingFive" data-parent="#accordionExample">
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">Give us a brief description of the deal you are submitting. The more detailed, the better!</label>
+                            @Html.TextAreaFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Add Special" class="btn btn-outline-danger" />
+        </div>
+     </div>
+}
+</body>
+</html>

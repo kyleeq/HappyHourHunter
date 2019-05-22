@@ -1,0 +1,91 @@
+/* body{
+  border: 1px solid red;
+} */
+
+.navbar-brand{
+  font-family: 'Lobster', cursive;
+}
+
+.carousel-item{
+  width: 100%;
+}
+
+#Highlights {
+    margin: 3% 10%;
+    text-align: center;
+    z-index: 1;
+    top: 200px;
+    text-align: center;
+}
+
+.homepage-icon{
+  color: #0075f6;
+  margin-bottom: 1rem;
+}
+
+.homepage-icon:hover{
+  color: #0900c3;
+}
+
+.highlight-paragraph{
+  text-align: center;
+}
+
+.carousel-inner{
+  align-items: center;
+}
+
+.header-objects{
+  height:300px;
+  width: 100%;
+  position:absolute;
+  z-index: 1;
+  top:5%;
+  text-align: center;
+}
+
+.homepage-header{
+  position:absolute;
+  z-index: 1;
+  font-family: 'Lobster', cursive;
+  color: white;
+  left: 40%;
+  top: 2%;
+  height: 20px;
+}
+
+.login{
+  position: absolute;
+  z-index: 1;
+  left: 45%;
+  top: 20%;
+}
+
+.signup{
+  position: absolute;
+  z-index: 1;
+  left: 45%;
+  top: 40%;
+}
+
+
+
+/* .Highlight-box{
+  text-align: center;
+  padding: 3%;
+} */
+
+/* .homepage-h2{
+  font-weight: bold;
+} */
+
+/* .homepage-h3{
+  font-weight: bold;
+} */
+/* .Highlight-paragraph{
+  text-align: center;
+} */
+
+/* .homepage-description{
+  color: grey;
+} */
