@@ -5,8 +5,7 @@ using System.Web;
 
 namespace MealDeals
 {
-    public static class APIKeys
+    public class GeolocationAPICall
     {
-        public static string GoogleApiKey = "AIzaSyABcapJqEQ0eK5zXs-jNz-aXbU7VnQwSAY";
     }
 }
