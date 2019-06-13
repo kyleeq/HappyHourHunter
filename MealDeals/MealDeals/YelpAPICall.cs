@@ -14,7 +14,7 @@ namespace MealDeals
 {
     public class YelpAPICall
     {
-        const string subscriptionKey = "Qw-VXCFojDhCxa5EBjIhmmWvsNXH7OMlN7k0FhYuhqlpy8uRUldE_PqB0HN-ffCvQ-3ggkM3qV2PLy0cioWOG2kFtId33ftw4nbP71wEpoM-8T9n2wpAXaAl5SzaXHYx";
+        const string subscriptionKey = Keys.YelpAPIKey;
         const string uriBase = "https://api.yelp.com/v3/businesses/";
         static HttpClient Client = new HttpClient();
 
